@@ -69,8 +69,10 @@ function UserRegister() {
             id="last-name-basic"
             label="Orgão Emissor"
             variant="outlined"
+            // type="date"
             fullWidth
             margin="normal"
+            // inputProps={{ type: 'date'}}
             value={getField("issuingBody", "")}
             onChange={handleChange("issuingBody")}
           />

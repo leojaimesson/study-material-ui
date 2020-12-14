@@ -1,5 +1,6 @@
 export function cpf(value) {
   return value
+    .replace(/[^0-9]/g, "")
     .replace(/\D/g, "")
     .replace(/(\d{3})(\d)/, "$1.$2")
     .replace(/(\d{3})(\d)/, "$1.$2")
@@ -8,7 +9,7 @@ export function cpf(value) {
 }
 
 export function rawCpf(value) {
-  return value.replace(/-|\./g, "");
+  return value.replace(/[^0-9]/g, "").replace(/-|\./g, "");
 }
 
 export function cnpj(value) {
@@ -48,12 +49,13 @@ export function pis(value) {
 
 export function rg(value) {
   return value
+    .replace(/[^0-9]/g, "")
     .replace(/\D/g, "")
     .replace(/(\d{2})(\d{3})(\d{3})(\d{1})$/, "$1.$2.$3-$4");
 }
 
 export function rawRg(value) {
-  return value.replace(/-|\./g, "");
+  return value.replace(/[^0-9]/g, "").replace(/-|\./g, "");
 }
 
 export function mcc(value) {
