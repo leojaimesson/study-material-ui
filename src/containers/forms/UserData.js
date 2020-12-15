@@ -3,13 +3,13 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Container from "@material-ui/core/Container";
 
-import useForm from "../../../hooks/useForm";
+import useForm from "../../hooks/useForm";
 
-import { cpf, rawCpf, rg, rawRg } from "../../../helpers/mask";
+import { cpf, rawCpf, rg, rawRg } from "../../helpers/mask";
 
-import ShowFormStore from "../../../components/ShowFormStore";
+import ShowFormStore from "../../components/ShowFormStore";
 
-function UserRegister() {
+function UserData() {
   const { getField, setField } = useForm();
 
   function handleChange(key) {
@@ -94,4 +94,4 @@ function UserRegister() {
   );
 }
 
-export default UserRegister;
+export default UserData;
